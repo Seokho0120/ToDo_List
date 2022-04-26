@@ -6,8 +6,8 @@ export default function Template({ children }) {
 }
 
 const TemplateBlock = styled.div`
-  width: 50%;
-  height: 100%;
+  width: 512px;
+  height: 768px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
