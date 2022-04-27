@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import Template from "./Components/Template";
 import Head from "./Components/Head";
 import List from "./Components/List";
+import CreateList from "./Components/Creat";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -17,6 +18,7 @@ export default function ToDoList() {
       <Template>
         <Head />
         <List />
+        <CreateList />
       </Template>
     </>
   );
