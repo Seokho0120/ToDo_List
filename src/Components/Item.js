@@ -14,6 +14,36 @@ export default function Item({ id, done, text }) {
   );
 }
 
+const CheckCircle = styled.div`
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid #62bfed;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  cursor: pointer;
+  ${(props) =>
+    props.done &&
+    css`
+      border: 1px solid #62bfed;
+      color: #62bfed;
+    `}// 조건부 스타일링 css 사용
+`;
+
+const Text = styled.div`
+  flex: 1;
+  font-size: 21px;
+  color: #495057;
+  ${(props) =>
+    props.done &&
+    css`
+      color: #ced4da;
+    `}
+`;
+
 const Remove = styled.div`
   display: flex;
   align-items: center;
@@ -35,36 +65,6 @@ const ItemBlock = styled.div`
   &:hover {
     ${Remove} {
       display: initial;
-    }
+    } // 컴포넌트 셀렉터 : Remove 컴포넌트를 보여줌
   }
-`;
-
-const CheckCircle = styled.div`
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  border: 1px solid #ced4da;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  cursor: pointer;
-  ${(props) =>
-    props.done &&
-    css`
-      border: 1px solid #38d9a9;
-      color: #38d9a9;
-    `}
-`;
-
-const Text = styled.div`
-  flex: 1;
-  font-size: 21px;
-  color: #495057;
-  ${(props) =>
-    props.done &&
-    css`
-      color: #ced4da;
-    `}
 `;
